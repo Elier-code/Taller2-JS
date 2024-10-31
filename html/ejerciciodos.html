@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Convertir US a COP</title>
+    <script src="../js/Utilidades.js"></script>
 </head>
 <body>
     <h1>Convertir US a COP</h1>
@@ -11,18 +12,8 @@
         <label for="usd">Dolares US:</label>
         <input type="text" id="usd"><br>
         <label for="cop">Pesos Colombianos COP :</label>
-        <input type="text" id="cop"><br>
+        <input type="text" id="cop" disabled><br>
     </form>
     <button onclick="covercionPesos()">Convertir Valores</button>
-    <script>
-        function covercionPesos(){
-            var usd = document.getElementById("usd").value;
-            var dolares = parseFloat(usd)
-            var tasaRepresentativa = 4410.62
-            var valorEnCOP = dolares * tasaRepresentativa
-            console.log(`${valorEnCOP}`)
-            document.getElementById("cop").value = valorEnCOP
-        }
-    </script>
 </body>
 </html>

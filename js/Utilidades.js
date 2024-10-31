@@ -11,3 +11,17 @@ function agregarElemtoALista(lista){
     listaUl.appendChild(item)
     //console.log(texto.textContent)
 }
+function covercionPesos(){
+    var usd = document.getElementById("usd").value;
+    var dolares = parseFloat(usd)
+    var tasaRepresentativa = 4410.62
+    var valorEnCOP = dolares * tasaRepresentativa
+    //console.log(`${valorEnCOP}`)
+    document.getElementById("cop").value = valorEnCOP
+}
+function convertirGrados(){
+    var centigrados = parseFloat(document.getElementById("centigrados").value)
+    var fahrenheit = centigrados * 9/5 + 32
+    document.getElementById("fahrenheit").value = fahrenheit
+    //console.log(`${fahrenheit}`)
+}

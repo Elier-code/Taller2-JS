@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creacion de tabla Empleados</title>
+</head>
+<body>
+    <h1>Creacion de tabla Empleados</h1>
+    <form action="">
+        <label for="codigo">Codigo Empleado: </label>
+        <input type="text" id="codigo"><br>
+        <label for="nombre">Nombre Empleado: </label>
+        <input type="text" id="nombre"><br>
+        
+    </form>
+    <button onclick="agregarEmpleadoATabla()">Agregar Empleado</button>
+    <table border="1" id="tabla">
+        <tr>
+            <th>Codigo Empleado</th>
+            <th>Nombre Empleado</th>
+        </tr>
+    </table>
+    <script>
+        function agregarEmpleadoATabla(){
+            var tabla = document.getElementById("tabla")
+            var fila = tabla.insertRow(-1)
+            var columnaCodigo = fila.insertCell(0)
+            var columnaNombre = fila.insertCell(1)
+            var columnaUno = document.getElementById("codigo")
+            if (columnaUno === undefined) {
+                alert("ingrese codigo")
+            } else {
+                
+            }
+            columnaCodigo.innerHTML = document.getElementById("codigo").value
+            columnaNombre.innerHTML = document.getElementById("nombre").value
+            document.getElementById("codigo").value = ""
+            document.getElementById("nombre").value = ""
+        }
+    </script>
+</body>
+</html>

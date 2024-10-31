@@ -4,13 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Convercion de Grados</title>
+    <script src="../js/Utilidades.js"></script>
 </head>
 <body>
     <h1>Convertir Centigrados a Fahrenheit</h1>
     <form action="">
         <label for="centigrados">Centigrados:</label>
-        <input type="text" id="centigrados" >
-        
+        <input type="text" id="centigrados" ><br>
+        <label for="fahrenheit">Fahrenheit:</label>
+        <input type="text" id="fahrenheit" disabled>
     </form>
+    <button onclick="convertirGrados()">Convertir</button>
 </body>
 </html>
