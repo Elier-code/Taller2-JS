@@ -12,7 +12,7 @@
         <input type="text" id="codigo"><br>
         <label for="nombre">Nombre Empleado: </label>
         <input type="text" id="nombre"><br>
-        
+
     </form>
     <button onclick="agregarEmpleadoATabla()">Agregar Empleado</button>
     <table border="1" id="tabla">
@@ -23,20 +23,21 @@
     </table>
     <script>
         function agregarEmpleadoATabla(){
-            var tabla = document.getElementById("tabla")
-            var fila = tabla.insertRow(-1)
-            var columnaCodigo = fila.insertCell(0)
-            var columnaNombre = fila.insertCell(1)
             var columnaUno = document.getElementById("codigo")
-            if (columnaUno === undefined) {
-                alert("ingrese codigo")
+            var columnaDos = document.getElementById("nombre")
+            if (columnaUno.value == "" && columnaDos.value == "") {
+                alert("ingrese codigo y nombre del Empleado")
             } else {
-                
+                var tabla = document.getElementById("tabla")
+                var fila = tabla.insertRow(-1)
+                var columnaCodigo = fila.insertCell(0)
+                var columnaNombre = fila.insertCell(1)
+
+                columnaCodigo.innerHTML = document.getElementById("codigo").value
+                columnaNombre.innerHTML = document.getElementById("nombre").value
+                document.getElementById("codigo").value = ""
+                document.getElementById("nombre").value = ""
             }
-            columnaCodigo.innerHTML = document.getElementById("codigo").value
-            columnaNombre.innerHTML = document.getElementById("nombre").value
-            document.getElementById("codigo").value = ""
-            document.getElementById("nombre").value = ""
         }
     </script>
 </body>

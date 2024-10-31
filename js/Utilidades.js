@@ -25,3 +25,17 @@ function convertirGrados(){
     document.getElementById("fahrenheit").value = fahrenheit
     //console.log(`${fahrenheit}`)
 }
+function ocultar(boton){
+    var idBoton = boton.id
+    switch(idBoton){
+        case "mostrarOcultar1":{
+            document.getElementById("contenido1").textContent = ""
+        }break;
+        case "mostrarOcultar2":{
+            document.getElementById("contenido2").textContent = ""
+        }break;
+        case "mostrarOcultar3":{
+            document.getElementById("contenido3").textContent = ""
+        }
+    }
+}
