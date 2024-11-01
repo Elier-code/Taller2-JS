@@ -39,3 +39,20 @@ function ocultar(boton){
         }
     }
 }
+function detectarMouse(event){
+    const xNavegador = event.clientX
+    const yNavegador = event.clientY
+    const xPagina = event.pageX
+    const yPagina = event.pageY
+    const positionNavegador = `Navegador [${xNavegador}, ${yNavegador}]`
+    document.getElementById("navegador").innerText = positionNavegador
+    const positionPagina = `Pagina [${xPagina}, ${yPagina}]`
+    document.getElementById("pagina").innerText = positionPagina
+}
+document.addEventListener("keydown", function(event) {
+    const tecla = event.key; // Obtiene el carácter de la tecla presionada
+    const codigo = event.keyCode || event.which; // Obtiene el código ASCII o Unicode de la tecla
+
+    document.getElementById("caracter").innerText = `Caracter: [${tecla}]`
+    document.getElementById("codigo").innerText = `Código: [${codigo}]`
+});
